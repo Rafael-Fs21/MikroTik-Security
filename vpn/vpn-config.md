@@ -32,7 +32,7 @@ Client to Site.
      OVERHEAD/PAYLOAD
        FRAGMENTAÇÃO
 
-MTU sempre menor que o valor suportado do dispositivo para ser possível a transferência do overhead e a fragmentação dos dados caso necessário.
+MTU sempre menor que o valor suportado do dispositivo parA ser possível a transferência do overhead e a fragmentação dos dados caso necessário.
            \/
 Listen port - Porta da VPN
 Recomendação: Alterar para evitar porta padrão.
