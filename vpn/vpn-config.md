@@ -49,18 +49,18 @@ Colocar /30 ou /32 é um método interessante, gerando 4 partições.
 - - - - - - - - - -
 3 - Criar o Peer - Com quem a VPN vai se conectar/comunicar
                            \/
-                   WIREGUARD - PEERS - FILIAL 1
+                   WIREGUARD - PEERS - MATRIZ
                            \/
-CRIAR INTERFACE DE ONDE SERÁ CONECTADO PARA GERAR A PUBLIC KEY NA FILIAL 2
+CRIAR INTERFACE DE ONDE SERÁ CONECTADO PARA GERAR A PUBLIC KEY NA FILIAL 1
                            \/
-                     WINBOX - FILIAL 2
+                     WINBOX - FILIAL 1
                            \/
                         WIREGUARD
                            \/
     **PODE COLOCAR A MESMA PORTA QUE A JA CRIADA PARA PADRONIZAR** 
                  **GERAR CHAVE PUBLIC KEY**
                            \/
-     COLOCAR A CHAVE CRIADA NO PEERS PARA FAZER A CONEXÃO - FILIZAL 1
+     COLOCAR A CHAVE CRIADA NO PEERS PARA FAZER A CONEXÃO - MATRIZ
                            \/
                         ENDPOINT
 **CASO TENHA UM  IP FIXO É MELHOR, MAS SE NÃO TIVER DEIXA EM BRANCO**
@@ -70,7 +70,8 @@ CRIAR INTERFACE DE ONDE SERÁ CONECTADO PARA GERAR A PUBLIC KEY NA FILIAL 2
 
 ** O RESTANTE VAMOS PREENCHENDO COM O**
 
-
+IMPORTANTE!!
+VAMOS FAZER AGORA ESSE MESMO PREENCHIMENTO DO OUTRO LADO, PARA CONECTAR TUDO DE VEZ.
 
 ## 💬 Comentários
 
