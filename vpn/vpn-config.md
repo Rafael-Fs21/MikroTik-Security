@@ -58,13 +58,17 @@ CRIAR INTERFACE DE ONDE SERÁ CONECTADO PARA GERAR A PUBLIC KEY NA FILIAL 2
                         WIREGUARD
                            \/
     **PODE COLOCAR A MESMA PORTA QUE A JA CRIADA PARA PADRONIZAR** 
-                 **GERAR CHAVE PUBLIC KEY*
+                 **GERAR CHAVE PUBLIC KEY**
                            \/
      COLOCAR A CHAVE CRIADA NO PEERS PARA FAZER A CONEXÃO - FILIZAL 1
                            \/
                         ENDPOINT
 **CASO TENHA UM  IP FIXO É MELHOR, MAS SE NÃO TIVER DEIXA EM BRANCO**
- 
+                           \/
+                      ENDPOINT PORT
+              **PORTA CRIADA NO WIREGUARD**
+
+** O RESTANTE VAMOS PREENCHENDO COM O**
 
 
 
