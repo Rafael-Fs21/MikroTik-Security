@@ -117,6 +117,25 @@ Exemplo: 10.100.10.2/30 - Filial 1
 
 🚨 IMPORTANTE!
 ** Versão: 2 - Trata ipv4; Versão 3 trata IPV6.**
+
+ROUTING
+\/
+AREAS
+** Colocar o nome, e o ID continua 0 pois só tem 1 area de conexão, ou seja, 1 empresa**
+**Caso haja outras áreas de rede, filiais, aí pode-se configurar e setar os ID das áreas**
+
+ROUTING
+\/
+INTERFACE TEMPLATES
+**Configurar o IP da Lan que será conectada na rota**
+**Preencher "Networks" com o IP da Lan. Broadcast passivo**
+
+**Configurar novamente com o IP da VPN, ficando LAN e VPN**
+**Pode-se colocar o IP/24, para sempre que conectar outra filial, ela acessar esses IP**
+** Preencher o " Network Type" com PTP. Point to Point"**
+
+**Refazer o mesmo procedimento na FILIAL** 
+
 ## 💬 Comentários
 
 A configuração de VPN em ambientes corporativos permite acesso remoto seguro à rede interna, sendo amplamente utilizada para administração de sistemas e suporte técnico.
