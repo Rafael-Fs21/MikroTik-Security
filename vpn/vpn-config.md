@@ -13,8 +13,7 @@ Permitir acesso remoto seguro à rede corporativa entre empresa: Matriz - Filial
 
 ```bash
 /interface pptp-server server set enabled=yes
-/ppp secret add name=usuario password=senha service=pptp
-/ip pool add name=vpn-pool ranges=192.168.10.2-192.168.10.10
+/ip pool add name=vpn-pool ranges= 10.100.10.1/30 - 10.100.10.2/30
 
 ## 🏷️ 𝐏𝐫𝐞𝐜𝐞𝐝𝐢𝐦𝐞𝐧𝐭𝐨𝐬/𝐍𝐨𝐦𝐞𝐜𝐥𝐚𝐭𝐮𝐫𝐚𝐬
 
@@ -44,7 +43,8 @@ Recomendação: Alterar para evitar porta padrão.
     NEW ADRRESS
 
 Definir a interface da wireguard criada e o IP - IP NOVO.
-Colocar /30 ou /32 é um método interessante, gerando 4 partições. 
+Colocar /30 ou /32 é um método interessante, gerando 4 partições.
+** o - Tunel. 1 - Rede 1. 2 - Rede 2. 3 - Broadcast**
 - - - - - - - - - -
 3 - Criar o Peer - Com quem a VPN vai se conectar/comunicar
                            \/
