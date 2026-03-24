@@ -1,13 +1,13 @@
 # Configuração de VPN - MikroTik
 
 ## 📌 Objetivo
-Permitir acesso remoto seguro à rede corporativa.
+Permitir acesso remoto seguro à rede corporativa entre empresa: Matriz - Filial. 
 
 ## 🔧 Configuração
 
-- Tipo: PPTP / L2TP / WIREGUARD
-- Autenticação com usuário e senha
-- Pool de IP para clientes VPN
+- Tipo: WIREGUARD
+- Estilo: Site to Site
+- Pool de IP para redes VPN
 
 ## 📡 Exemplo
 
@@ -37,7 +37,6 @@ MTU sempre menor que o valor suportado do dispositivo para ser possível a trans
 Listen port - Porta da VPN
 Recomendação: Alterar para evitar porta padrão.
 - - - - - - - - - - 
-
 2 - Definir IP da VPN
         \/
      INTERFACE
@@ -73,7 +72,6 @@ CRIAR INTERFACE DE ONDE SERÁ CONECTADO PARA GERAR A PUBLIC KEY DA MATRIZ
 #### 🚨 IMPORTANTE!!
 VAMOS FAZER AGORA ESSE MESMO PREENCHIMENTO DO OUTRO LADO, PARA CONECTAR TUDO DE VEZ.
 - - - - - - - - - - - 
-
 ##🌐 𝐈𝐏 𝐂𝐨𝐧𝐟𝐢𝐠𝐮𝐫𝐚çã𝐨
 
 Importante entender que o wareguard é uma interface, então como as outras é necessário estabelecer o IP para que funcione, e estabelecer a porta (Wireguard). Da qual precisa ser criada. 
@@ -88,9 +86,9 @@ CRIAR INTERFACE COM MTU E SETAR A PORTA
             \ /
              +
             \ /
-S ELECIONAR INTERFACE WAREGUARD
+ SELECIONAR INTERFACE WAREGUARD
             \ /
-CRIAR BLOCO DE IP NOVO (USANDO .1 E .2
+ CRIAR BLOCO DE IP NOVO (USANDO .1 E .2)
 
 ** Como exemplo já citado, usando /30 ou /32**
 Exemplo: 10.100.10.1/30 - Matriz
