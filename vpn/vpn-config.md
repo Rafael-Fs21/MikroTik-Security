@@ -51,7 +51,7 @@ Colocar /30 ou /32 é um método interessante, gerando 4 partições.
                            \/
                    WIREGUARD - PEERS - MATRIZ
                            \/
-CRIAR INTERFACE DE ONDE SERÁ CONECTADO PARA GERAR A PUBLIC KEY DA FILIAL 1
+CRIAR INTERFACE DE ONDE SERÁ CONECTADO PARA GERAR A PUBLIC KEY DA MATRIZ
                            \/
                      WINBOX - MATRIZ
                            \/
@@ -72,6 +72,7 @@ CRIAR INTERFACE DE ONDE SERÁ CONECTADO PARA GERAR A PUBLIC KEY DA FILIAL 1
 
 #### 🚨 IMPORTANTE!!
 VAMOS FAZER AGORA ESSE MESMO PREENCHIMENTO DO OUTRO LADO, PARA CONECTAR TUDO DE VEZ.
+- - - - - - - - - - - 
 
 ##🌐 𝐈𝐏 𝐂𝐨𝐧𝐟𝐢𝐠𝐮𝐫𝐚çã𝐨
 
@@ -83,17 +84,30 @@ CRIAR INTERFACE COM MTU E SETAR A PORTA
 
 ** Com isso, é gerada a interface para setar no ip que será criado**
 
- IP ADDRESS
-\/
-+
-\/
-SELECIONAR INTERFACE WAREGUARD
-\/
+        IP ADDRESS
+            \ /
+             +
+            \ /
+S ELECIONAR INTERFACE WAREGUARD
+            \ /
 CRIAR BLOCO DE IP NOVO (USANDO .1 E .2
 
 ** Como exemplo já citado, usando /30 ou /32**
 Exemplo: 10.100.10.1/30 - Matriz
 Exemplo: 10.100.10.2/30 - Filial 1
+- - - - - - - - - - -
+##🖇️ 𝐏𝐞𝐞𝐫𝐬
+
+** A configuração do peers é simples, basta ter a porta, public key e interface para conectar**
+** Para a public key ser gerada, precisamos criar uma interface na filial, igual se faz na matriz**
+**Lembrando que iremos preencher o peers da matriz primeiro, por isso precisamos da key da filial1**
+** Campo de "Preshare key" podemos deixar em auto, ou se tiver um IP fixo também podemos colocar**
+- - - - - - - - - - - 
+
+
+
+
+
 
 
 
