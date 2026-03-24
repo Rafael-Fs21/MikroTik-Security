@@ -18,3 +18,7 @@ add chain=input action=drop comment="Bloquear acessos externos não autorizados"
 que podem variar desde a liberação específica de IPs até o bloqueio de portas e conexões.
 
 As configurações são adaptadas conforme as necessidades do ambiente corporativo, garantindo maior controle e segurança da rede.
+
+## 🧱 𝐂𝐚𝐦𝐚𝐝𝐚𝐬 𝐝𝐞 𝐩𝐫𝐨𝐭𝐞çã𝐨
+
+** Segurança de Mikrotik não se baseia somente na camada 3 e 4, Rede e porta, mas também na camada 2, que é super importante**
