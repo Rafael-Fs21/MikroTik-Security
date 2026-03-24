@@ -2,26 +2,24 @@
 
 ## 📌 Objetivo
 Permitir acesso remoto seguro à rede corporativa entre empresa: Matriz - Filial. 
-
+- - - - - - - - - - - 
 ## 🔧 Configuração
 
 - Tipo: WIREGUARD
 - Estilo: Site to Site
 - Pool de IP para redes VPN
-
+- - - - - - - - - - -
 ## 📡 Exemplo
 
 ```bash
 /interface pptp-server server set enabled=yes
 /ip pool add name=vpn-pool ranges= 10.100.10.1/30 - 10.100.10.2/30
-
-## 🏷️ 𝐏𝐫𝐞𝐜𝐞𝐝𝐢𝐦𝐞𝐧𝐭𝐨𝐬/𝐍𝐨𝐦𝐞𝐜𝐥𝐚𝐭𝐮𝐫𝐚𝐬
-
+- - - - - - - - - - - 
 ### 𝐓𝐢𝐩𝐨𝐬:
 
 Site to Site.
 Client to Site.
-
+- - - - - - - - - - -
 ## ⚙️ 𝐌é𝐭𝐨𝐝𝐨𝐬
 
 1 - Criar Interface Wareguard - Criando túnel da VPN. 
@@ -35,7 +33,7 @@ MTU sempre menor que o valor suportado do dispositivo para ser possível a trans
            \/
 Listen port - Porta da VPN
 Recomendação: Alterar para evitar porta padrão.
-- - - - - - - - - - 
+
 2 - Definir IP da VPN
         \/
      INTERFACE
@@ -45,7 +43,7 @@ Recomendação: Alterar para evitar porta padrão.
 Definir a interface da wireguard criada e o IP - IP NOVO.
 Colocar /30 ou /32 é um método interessante, gerando 4 partições.
 ** o - Tunel. 1 - Rede 1. 2 - Rede 2. 3 - Broadcast**
-- - - - - - - - - -
+
 3 - Criar o Peer - Com quem a VPN vai se conectar/comunicar
                            \/
                    WIREGUARD - PEERS - MATRIZ
@@ -71,6 +69,8 @@ CRIAR INTERFACE DE ONDE SERÁ CONECTADO PARA GERAR A PUBLIC KEY DA MATRIZ
 
 #### 🚨 IMPORTANTE!!
 VAMOS FAZER AGORA ESSE MESMO PREENCHIMENTO DO OUTRO LADO, PARA CONECTAR TUDO DE VEZ.
+
+ RESUMO DESSA PARTE: Criar o wireguard padrão, criar um IP novo, mas sempre setando .1 e .2, para organizar. No peers, usamos a chave publica para a comunicação de ambos os lados. Preenchemos "interface", "Public key", "Endpoint" e "Endpoint port". (Lembrando que a mesma port nos 2 lados)
 - - - - - - - - - - - 
 ##🌐 𝐈𝐏 𝐂𝐨𝐧𝐟𝐢𝐠𝐮𝐫𝐚çã𝐨
 
@@ -82,12 +82,12 @@ CRIAR INTERFACE COM MTU E SETAR A PORTA
 
 ** Com isso, é gerada a interface para setar no ip que será criado**
 
-        IP ADDRESS
-            \ /
-             +
-            \ /
+             IP ADDRESS
+              \ /
+               +
+              \ /
  SELECIONAR INTERFACE WAREGUARD
-            \ /
+              \ /
  CRIAR BLOCO DE IP NOVO (USANDO .1 E .2)
 
 ** Como exemplo já citado, usando /30 ou /32**
@@ -118,15 +118,17 @@ Exemplo: 10.100.10.2/30 - Filial 1
 🚨 IMPORTANTE!
 ** Versão: 2 - Trata ipv4; Versão 3 trata IPV6.**
 
-ROUTING
-\/
-AREAS
+    ROUTING
+      \/
+     AREAS
+
 ** Colocar o nome, e o ID continua 0 pois só tem 1 area de conexão, ou seja, 1 empresa**
 **Caso haja outras áreas de rede, filiais, aí pode-se configurar e setar os ID das áreas**
 
-ROUTING
-\/
+    ROUTING
+      \/
 INTERFACE TEMPLATES
+
 **Configurar o IP da Lan que será conectada na rota**
 **Preencher "Networks" com o IP da Lan. Broadcast passivo**
 
@@ -134,14 +136,11 @@ INTERFACE TEMPLATES
 **Pode-se colocar o IP/24, para sempre que conectar outra filial, ela acessar esses IP**
 ** Preencher o " Network Type" com PTP. Point to Point"**
 
-**Refazer o mesmo procedimento na FILIAL** 
+**Refazer o mesmo procedimento na FILIAL**
+- - - - - - - - - - - 
 
 ## 💬 Comentários
 
 A configuração de VPN em ambientes corporativos permite acesso remoto seguro à rede interna, sendo amplamente utilizada para administração de sistemas e suporte técnico.
 
 A escolha do protocolo, autenticação e controle de acesso deve ser feita considerando segurança, desempenho e compatibilidade com o ambiente.
-
- RESUMO DESSA PARTE: Criar o wireguard padrão, criar um IP novo, mas sempre setando .1 e .2, para organizar. No peers, usamos a chave publica para a comunicação de ambos os lados. Preenchemos "interface", "Public key", "Endpoint" e "Endpoint port". (Lembrando que a mesma port nos 2 lados).
-
-
