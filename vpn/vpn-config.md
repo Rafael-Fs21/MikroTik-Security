@@ -100,14 +100,17 @@ Exemplo: 10.100.10.2/30 - Filial 1
 ** Para a public key ser gerada, precisamos criar uma interface na filial, igual se faz na matriz**
 **Lembrando que iremos preencher o peers da matriz primeiro, por isso precisamos da key da filial1**
 ** Campo de "Preshare key" podemos deixar em auto, ou se tiver um IP fixo também podemos colocar**
+** Na configuração de Peers da FILIAL, o "ENDPOINT" é primordial. Ele é o IP da matriz, no caso, o IP da WAN que está cadatrado na interface da matriz**
 - - - - - - - - - - - 
+** Nesse momento já se deve ter conexão e comunicação**
+- - - - - - - - - - -
+##🤖 𝐎𝐒𝐏𝐅
 
-
-
-
-
-
-
+ROUTING
+\/
+OSPF
+\/
+INSTANCIA
 
 
 
