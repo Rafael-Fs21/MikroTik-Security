@@ -106,14 +106,17 @@ Exemplo: 10.100.10.2/30 - Filial 1
 - - - - - - - - - - -
 ##🤖 𝐎𝐒𝐏𝐅
 
-ROUTING
-\/
-OSPF
-\/
-INSTANCIA
+    ROUTING
+      \/
+     OSPF
+      \/
+   INSTANCIA
 
+** Vai ser criado uma instancia, que é um processo da qual irá correr**
+**Preencher o nome, versão, e o resto deixa como está**
 
-
+🚨 IMPORTANTE!
+** Versão: 2 - Trata ipv4; Versão 3 trata IPV6.**
 ## 💬 Comentários
 
 A configuração de VPN em ambientes corporativos permite acesso remoto seguro à rede interna, sendo amplamente utilizada para administração de sistemas e suporte técnico.
