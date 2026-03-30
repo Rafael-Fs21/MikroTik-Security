@@ -11,3 +11,8 @@
 - Faixa: 192.168.0.0/24
 - Gateway: 192.168.0.1
 - DHCP ativo
+
+VLAN NO MIKROTIK E A SEPARAÇÃO DE DEPARTAMENTOS.
+
+- Trunk: Passa várias ou todas as Vlans
+- Access:
